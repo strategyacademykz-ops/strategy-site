@@ -10,3 +10,5 @@ if ('IntersectionObserver' in window) {
   }), { threshold: 0.05, rootMargin: '0px 0px -5% 0px' });
   document.querySelectorAll('.sec .wrap > *, .card').forEach(el => { el.classList.add('rv'); io.observe(el); });
 }
+window.addEventListener('load', () => { document.documentElement.style.scrollBehavior = 'smooth'; });
+window.addEventListener('pageshow', e => { if (e.persisted && !location.hash) window.scrollTo(0, 0); });
