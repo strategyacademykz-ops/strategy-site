@@ -167,3 +167,14 @@ footer{padding:28px 0;color:var(--mute);font:400 14px var(--h);letter-spacing:.1
   .bname{font-size:13px}.bname small{font-size:9px}
   .mark{width:38px;height:38px;font-size:18px}
 }
+/* strategy blocks / 5 cards */
+.blocks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.blk{display:grid;grid-template-columns:56px 1fr;gap:0 16px;padding:24px 0;border-top:1px solid var(--line)}
+.blk span{grid-row:1/3;font:500 28px var(--h);color:var(--lime)}
+.blk h3{font-size:20px;margin-bottom:6px}
+.blk p{color:var(--mute);font-size:16px}
+.cards:not(.sm) .card:last-child:nth-child(odd){grid-column:1/-1;flex-direction:row}
+.cards:not(.sm) .card:last-child:nth-child(odd) .cimg{width:44%;flex:none}
+.cards:not(.sm) .card:last-child:nth-child(odd) .cimg img{height:100%;aspect-ratio:auto}
+.cards.sm{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+@media (max-width:980px){.blocks{grid-template-columns:1fr}.cards:not(.sm) .card:last-child:nth-child(odd){flex-direction:column}.cards:not(.sm) .card:last-child:nth-child(odd) .cimg{width:100%}.cards:not(.sm) .card:last-child:nth-child(odd) .cimg img{aspect-ratio:16/10}.cards.sm{grid-template-columns:1fr}}
